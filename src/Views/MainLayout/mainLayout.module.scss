@@ -1,0 +1,178 @@
+@import '../../commonstyle/color.module.scss';
+@import '../../commonstyle/font.module.scss';
+
+
+.mainWrapper {
+    .sliderContainer {
+        background-color: $white!important;
+        min-height: 100vh;
+        :global {
+            ul{
+                li {
+                    padding: 25px 0px 25px 24px!important;
+                    margin-bottom: 20px;
+                }
+            }
+            .ant-menu-title-content  {
+                a {
+                    font-weight: 700;
+                    font-size: 16px!important;
+                    line-height: 24px!important;
+                    color: #b1b4bb;
+                }
+            }
+            .ant-menu-item-selected {
+                background: $white!important;
+                border-radius: 0!important;
+                a{
+                    color: rgba(0, 0, 0, 0.88)!important;
+                }
+            }
+            .ant-layout-sider-trigger {
+                height: 30px;
+                line-height: 32px;
+                background-color:$white!important;
+            }
+            .ant-layout-sider-children {
+                border: 1px solid $test123;
+                background-color: $white!important;
+            }
+            .ant-layout-sider-children {
+                padding-top: 100px!important;
+            }
+            .ant-menu-item-selected {
+                border-radius: 6px!important;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                background-color: #fff;
+                .anticon {
+                    background-color: rgb(42, 57, 88)!important;
+                    svg {
+                        color: $white!important;
+                    }
+                }
+            }
+        }
+        .menuIcon {
+            :global {
+                .ant-menu-item {
+                    margin-left: 19px;
+                    width: 88%;
+                }
+                .anticon {
+                    border-radius: 6px!important;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                    padding: 7px!important;
+                    background-color: $white;
+                    width: 29px!important;
+                    display: $black!important;
+                    margin-left: -6px;
+                }
+            }
+
+        }
+    }
+
+    .headerContainer {
+        background-color: $white!important;
+        border: 1px solid $test123;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000000000;
+        height: 84px;
+        @media (max-width: 767px) {
+            height: 70px;
+            :global {
+                .anticon-appstore {
+                    font-size: 23px!important;
+                }
+            }
+        }
+        left: 0;
+        margin-bottom: 20px;
+        .headerMenus {
+            padding: 12px!important;
+            .imageLogo {
+                width: 85%;
+                height: 29px;
+            }
+            button {
+                height: 45px;
+                line-height: 3;
+                width: 90%;
+            }
+            :global {
+                .ant-input-affix-wrapper {
+                    height: 45px!important;
+                    line-height: 3;
+                    width: 98%;
+                }
+                button,.ant-select-selector,.ant-input-affix-wrapper { 
+                    border: 1px solid $inputBorderClr!important;
+                }
+                :where(.css-dev-only-do-not-override-1qfezbu).ant-col-offset-6 {
+                    margin-inline-start: 8%!important;
+                }
+                @media (max-width: 767px) {
+                    :where(.css-dev-only-do-not-override-1qfezbu).ant-col-offset-6 {
+                        margin-inline-start: 25%!important;
+                    }
+                }
+            }
+            .profileNamWrapper {
+                position: absolute;
+                top: -4px;
+                width: 189px;
+                left: 58px;
+                display: block;
+                @include fontStyle($Pretendard-Medium, 14px, 500,$fontColor, 36px,0em);
+                b{
+                    display: block;
+                    margin-bottom: -51px;
+                }
+            }
+            .avatherWrapper {
+                margin-inline-start: 8% !important;
+            }
+        }
+        .closeBtn {
+            svg {
+                font-size: 22px;
+                color: $lightDark;
+                font-weight: 700;
+                display: block;
+                padding-bottom: 4px;
+                width: 100%;
+            }
+        }
+        .avatherImg {
+            vertical-align: sub;
+            width: 3rem;
+        }
+        @media (max-width: 767px) {
+            .avatherImg {
+                width: 1.5rem;
+            }
+        }
+    }
+    .openBtn {
+        position: fixed;
+        top: 30px;
+        font-size: 20px;
+        left: 8px;
+        color: $lightDark;
+    }
+}
+:global {
+    .ant-menu-inline-collapsed {
+        li{
+            margin-left: 5px !important;
+            width: 91% !important;
+            height: 80px!important;
+            padding: 21px 0px 0px 22px !important;
+            margin-bottom: 0px!important;
+        }
+    }
+}

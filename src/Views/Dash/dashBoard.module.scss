@@ -1,0 +1,160 @@
+@import '../../commonstyle/color.module.scss';
+@import '../../commonstyle/font.module.scss';
+@import '../../commonstyle/media-queries.scss';
+
+.memberShipWrapper {
+    background-color: $white;
+    h5 {
+        @include fontStyle($Pretendard-Medium, 16px, 600,$fontColor, 29px,0em);
+    }
+    .MemberShipStatus {
+        padding: 30px 0px 30px 0px;
+        border-radius: 6px;
+        min-height: 150px;
+        border: 1px solid $test123;
+        :nth-child(1),:nth-child(2),:nth-child(3) {
+            border-right: 1px solid $test123;
+        }
+        :nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4) {
+            text-align: center;
+            h5,span {
+                text-align: center;
+                @include fontStyle($Pretendard-Medium, 14px, 700,$fontColor, 16px,0em);
+                border-right: none!important;
+                @media (max-width: 767px) {
+                    font-size: 12px;
+                    line-height: 6px;
+                }
+            }
+            b {
+                text-align: center;
+                text-decoration: underline;
+                @include fontStyle($Pretendard-Medium, 30px, 500,$digitClr, 36px,0em);
+                border: none;
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+       
+    }
+    .joinSection {
+        background-color: $joinSectionColor!important;
+        border-radius: 4px;
+        padding: 20px;
+        label {
+            margin-right: 10px;
+            border-radius: 10px;
+            width: auto;
+            color: $buttonTheme;
+            @include fontStyle($Pretendard-Medium, 14px, 500,$buttonTheme, 30px,0em);
+        }
+        :global {
+            .ant-radio-button-checked {
+                background-color: $buttonTheme!important;
+                margin-right: 10px;
+                border-radius: 10px;
+                color: $white!important;
+            }
+            input,button,.ant-select-selector { 
+                border: 1px solid $inputBorderClr!important;
+                width: 100%;
+            }
+            .ant-picker-outlined {
+                border: 1px solid $inputBorderClr!important;
+                input {
+                    border: none!important;
+                }
+            }
+            .ant-radio-wrapper.ant-radio-wrapper-checked .ant-radio-inner {
+                border-color: $buttonTheme!important;
+                background-color: $buttonTheme!important;
+            }
+            .ant-btn-primary {
+                background-color: $buttonTheme!important;
+            }
+        }
+        .inputradioSection {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+    }
+    .tableWrapper {
+        .tableSection{
+            margin-bottom: 20px;
+            width: 100%;
+            border-bottom: 1px solid $inputBorderClr!important;
+            .tableSectionTitle {
+                @include fontStyle($Pretendard-Medium, 14px, 500,$buttonTheme, 30px,0em);
+                @media (max-width: 767px) {
+                    font-size: 13px;
+                }
+                margin-top: 20px;
+                b{
+                    text-decoration: underline;
+                    color: $deleteIconColor;
+                }
+            }
+            :global {
+                input,button,.ant-select-selector { 
+                    border: 1px solid $inputBorderClr!important;
+                    width: 100%;
+                }
+            }
+        }
+        .tablesearch1 {
+            width: 100%;
+            margin-top: 20px;
+            float: right;
+        }
+    }
+    .tableHeaderwrapper {
+        width: 100%;
+        .tableBtnWrapper {
+            width: 100%;
+            float: right;
+            @include fontStyle($Pretendard-Medium, 14px, 500,$buttonTheme, 36px,0em);
+            :global {
+                .ant-btn-primary{
+                    background-color: $buttonTheme!important;
+                }
+                .ant-typography {
+                    line-height: 28px;
+                }
+            }
+            button{
+                float: inline-end;
+            }
+            :global {
+                .ant-select-selector { 
+                    border: 1px solid $inputBorderClr!important;
+                    width: 100%;
+                }
+            }
+        }
+        :global {
+            .ant-table-wrapper {
+                margin-top: -20px;
+                border-radius: 10px!important;
+            }
+        }
+    }
+    table {
+        thead {
+            th{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 150px;
+                background-color: #eef0f4 !important;
+            }
+        }
+        :global {
+            .even-row {
+                background-color: #f9f9fb !important;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,86 @@
+@import '../../../commonstyle/color.module.scss';
+@import '../../../commonstyle/font.module.scss';
+@import '../../../commonstyle/media-queries.scss';
+
+.memberDetailsWrapper {
+    :global {
+        .ant-btn-primary {
+            background-color: $buttonTheme!important;
+            color: $white;
+        }
+        button {
+            margin-left: 10px;
+            margin-bottom: 20px;
+            float: inline-end;
+            color: $buttonTheme;
+            border: 1px solid $buttonTheme;
+        }
+    }
+    background-color: $white;
+    h5 {
+        @include fontStyle($Pretendard-Medium, 16px, 600,$fontColor, 29px,0em);
+    }
+
+    // creat table style
+    .tableWrapper,.tableWrapper2,.tableWrapper3 {
+        border: 1px solid $tableBg;
+        min-height: 400px;
+        p {
+            @include fontStyle($Pretendard-Medium, 18px, 500,$buttonTheme, 18px,0em);
+            padding: 0px 0px 0px 20px;
+        }
+        .wraperC {
+            background-color: $tableBg;
+        }
+        > * {
+            .r1,.r2 {
+                    border-bottom: 1px solid $white;
+                    min-height: 50px;
+            }
+            .r2 {
+                .c1,.c2 {
+                    border-right: 1px solid $white;
+                }
+                .c2 {
+                    .r3,.r4 {
+                        min-height: 25px;
+                        border-bottom: 1px solid $white;
+                    }
+                    :nth-child(2) {
+                        border-bottom: 0px;
+                    }
+                }
+            }
+            :last-child {
+                border-bottom: 0px;
+            }
+            .r1 {
+                border-right: 1px solid $tableBg
+            }
+            //secound colm
+            .r11 {
+                min-height: 55px;
+            }
+            .r12,.r14 {
+                min-height: 25px;
+                border-bottom: 1px solid $tableBg;
+            }
+        }
+    }
+    .tableWrapper2 {
+        min-height: 200px;
+    }
+    .tableWrapper3 {
+        min-height: 100px;
+    }
+    .r15 {
+        border-top: 0px solid $tableBg;
+        input, textarea {
+            border: 1px solid #807575!important;
+        }
+    }
+    textarea {
+        width: 44rem;
+    }
+}
+

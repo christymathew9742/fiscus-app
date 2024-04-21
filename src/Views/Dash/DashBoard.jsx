@@ -169,8 +169,9 @@ const DashBoard = () => {
             key: i,
             no: `${i}`,
             Membershipnumber: (<a  onClick={() => 
-                navigate('/member-details',{ state: { data: i} },
-            )}  href="#" style={{color:'rgba(0, 0, 0, 0.88)',textDecoration: 'underline'}}>{`Abc12${i}`}</a>),
+                navigate(`/member-details?mode=details&id=${i}`,{ state: { data: i} },
+                
+            )}   href="#" style={{color:'rgba(0, 0, 0, 0.88)',textDecoration: 'underline'}}>{`Abc12${i}`}</a>),
             number: `010-1234-567${i}`,
             EmailID:`aaaaaaaa${i}c@naver.com`,
             divisionCategory:`Invest individual`,

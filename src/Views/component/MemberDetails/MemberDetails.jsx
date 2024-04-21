@@ -48,6 +48,9 @@ const {
 const { RangePicker } = DatePicker;
 const CheckboxGroup = Checkbox.Group;
 const MemberDetails = ()=> {
+    const memberDetails = useLocation();
+    const searchParams = new URLSearchParams(memberDetails.search);
+    const currentData = searchParams.get('id');
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const { state } = useLocation();
     const [details,steDetails] = useState(state)
@@ -246,7 +249,7 @@ const MemberDetails = ()=> {
                     <Row
                         className={styles['r11']}
                     >
-                        <p level={5}>ABC123</p>
+                        <p level={5}>{`Abc${currentData}`}</p>
                     </Row>
                     <Row
                         className={styles['r12']}

@@ -210,6 +210,7 @@ const DashBoard = () => {
         <Layout className={styles['memberShipWrapper']}>
             <Row>
                 <Typography.Title
+                    style={isMobile && {textAlign:'center'}}
                     level={5}
                 >
                     {MemberMainTitle}
@@ -248,7 +249,7 @@ const DashBoard = () => {
                             </Form.Item>
                         </Col>
                         <Col
-                            span={!isMobile? 8:20}
+                            span={!isMobile? 8:24}
                         >
                             <Form.Item
                                 name={JoinDate.dateName}
@@ -303,7 +304,7 @@ const DashBoard = () => {
                                 <CheckboxGroup 
                                     options={[
                                         'Entry', 
-                                        'Aiting for approval', 
+                                        'Waiting for approval', 
                                         'Approved',
                                         'Approval denied',
                                     ]} 
@@ -424,7 +425,7 @@ const DashBoard = () => {
                             justify="space-between"
                         >
                             <Col
-                                span={!isMobile?8:24}
+                                span={!isMobile?8:12}
                             >
                                 <Form.Item
                                     name={Searchs.Name}
@@ -448,7 +449,7 @@ const DashBoard = () => {
                                 </Form.Item>
                             </Col>
                             <Col
-                                span={!isMobile?8:24}
+                                span={!isMobile?8:11}
                             >
                                 <Form.Item
                                     name={Searchs.Name}
@@ -499,7 +500,7 @@ const DashBoard = () => {
                             justify="space-between"
                         >
                             <Col
-                                span={!isMobile?8:12}
+                                span={!isMobile?8:11}
                             >
                                 <Form.Item
                                     name={Searchs.Name}
@@ -510,7 +511,8 @@ const DashBoard = () => {
                                 </Form.Item>
                             </Col>
                             <Col
-                                span={12}
+                                span={!isMobile?12:7}
+                                className={styles['tableTop']}
                             >
                                 <Form.Item
                                     name={Searchs.Name}
@@ -534,7 +536,8 @@ const DashBoard = () => {
                                 </Form.Item>
                             </Col>
                             <Col
-                                span={!isMobile?4:24}
+                                span={4}
+                                className={styles['tableTop']}
                             >
                                 <Form.Item
                                     name={Searchs.Name}

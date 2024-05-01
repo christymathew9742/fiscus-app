@@ -223,10 +223,10 @@ const MemberShipManage = () => {
                     <Typography.Title
                         level={5}
                     >
-                        entire
+                        Entire
                     </Typography.Title>
                     <b>100</b>
-                    <span>number of people</span>
+                    <span> Number of people</span>
                 </Col>
                 <Col
                     span={isMobile? 12 : 6}
@@ -237,7 +237,7 @@ const MemberShipManage = () => {
                         Waiting for approval
                     </Typography.Title>
                     <b>10</b>
-                    <span>number of people</span>
+                    <span> Number of people</span>
                 </Col>
                 <Col
                     span={isMobile? 12 : 6}
@@ -248,7 +248,7 @@ const MemberShipManage = () => {
                         Approved
                     </Typography.Title>
                     <b>80</b>
-                    <span>number of people</span>
+                    <span> Number of people</span>
                 </Col>
                 <Col
                     span={isMobile? 12 : 6}
@@ -259,7 +259,7 @@ const MemberShipManage = () => {
                         Approval denied
                     </Typography.Title>
                     <b>10</b>
-                    <span>number of people</span>
+                    <span> Number of people</span>
                 </Col>
             </Row>
             <Row
@@ -295,7 +295,7 @@ const MemberShipManage = () => {
                             </Form.Item>
                         </Col>
                         <Col
-                            span={!isMobile? 8:20}
+                            span={!isMobile? 8:24}
                         >
                             <Form.Item
                                 name={JoinDate.dateName}
@@ -554,7 +554,7 @@ const MemberShipManage = () => {
                             justify="space-between"
                         >
                             <Col
-                                span={!isMobile?8:24}
+                                span={!isMobile?8:12}
                             >
                                 <Form.Item
                                     name={Searchs.Name}
@@ -578,7 +578,7 @@ const MemberShipManage = () => {
                                 </Form.Item>
                             </Col>
                             <Col
-                                span={!isMobile?8:12}
+                                span={!isMobile?8:11}
                             >
                                 <Form.Item
                                     name={Searchs.Name}
@@ -606,7 +606,7 @@ const MemberShipManage = () => {
                                 </Form.Item>
                             </Col>
                             <Col
-                                span={!isMobile?7:11}
+                                span={!isMobile?7:24}
                             >
                                 <Form.Item
                                     name={Searchs.Name}
@@ -629,7 +629,7 @@ const MemberShipManage = () => {
                             justify="space-between"
                         >
                             <Col
-                                span={!isMobile?8:12}
+                                span={!isMobile?8:11}
                             >
                                 <Form.Item
                                     name={Searchs.Name}
@@ -640,7 +640,7 @@ const MemberShipManage = () => {
                                 </Form.Item>
                             </Col>
                             <Col
-                                span={12}
+                                span={!isMobile?12:7}
                             >
                                 <Form.Item
                                     name={Searchs.Name}
@@ -664,7 +664,7 @@ const MemberShipManage = () => {
                                 </Form.Item>
                             </Col>
                             <Col
-                                span={!isMobile?4:24}
+                                span={4}
                             >
                                 <Form.Item
                                     name={Searchs.Name}

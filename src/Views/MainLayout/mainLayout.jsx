@@ -72,7 +72,6 @@ const MainLayout = () => {
         setIsModalOpen(false);
     };
 
-     
     function getItem(
         label,
         key,
@@ -88,7 +87,6 @@ const MainLayout = () => {
       }
 
     const items = [
-        // getItem(<Link to={ROUTES.DashBoard}>Dashboard</Link>,ROUTES.DashBoard, <HomeOutlined />),
         getItem(<Link to={ROUTES.DashBoard}>Dashboard</Link>,ROUTES.DashBoard, <HomeOutlined />),
         getItem(<Link to={ROUTES.MemberShip}>Membership Manage</Link>,ROUTES.MemberShip,<UserOutlined/>),
     ];
@@ -106,6 +104,7 @@ const MainLayout = () => {
         <Layout
           className={styles['mainWrapper']}
         >
+            {!isMobile && (
             <Sider
                 collapsible={false}
                 collapsed={collapsed}
@@ -129,6 +128,7 @@ const MainLayout = () => {
                     selectedKeys={[pathname]}
                 />
             </Sider>
+            )}
             <Layout className="siteLayout">
                 <Header
                     className={styles['headerContainer']}
@@ -272,6 +272,8 @@ const MainLayout = () => {
                     >
                         <Row
                            justify="space-between"
+                           className={styles['popupWrapper']}
+                           width="100%"
                         >
                             <Col
                                 span={12}
@@ -304,6 +306,17 @@ const MainLayout = () => {
                                 </Button>
                             </Col>
                         </Row>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Menu 
+                            theme="light" 
+                            defaultSelectedKeys={[pathname]} 
+                            mode="inline" 
+                            items={items}
+                            selectedKeys={[pathname]}
+                        />
                     </Col>
                 </Row>
             </Modal>

@@ -1,10 +1,10 @@
 /* for high resalution screen  */
 @media (min-width: 1200px) {
-  /* .App {
+  .App {
       min-height: 75vh;
       max-width: 1400px;
       margin: auto;
-  } */
+  }
 }
 /* // common style heres*/
 table {
@@ -67,5 +67,8 @@ table {
 .ant-radio-button-wrapper:not(:first-child)::before {
   background-color:transparent!important;
   width: 0px!important;
+}
+.ant-radio-button-wrapper {
+  border: 1px solid rgb(42, 57, 88)!important;
 }
 

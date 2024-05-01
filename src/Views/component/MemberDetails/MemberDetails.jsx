@@ -62,7 +62,9 @@ const MemberDetails = ()=> {
             className={styles['memberDetailsWrapper']}
         >
             
-            <Row>
+            <Row
+                style={{borderBottom:'1px solid rgb(236 226 226)',marginBottom:'20px'}}
+            >
                 <Typography.Title
                     level={5}
                 >
@@ -88,6 +90,7 @@ const MemberDetails = ()=> {
                 <Col
                     span={!isMobile?13:24}
                     offset={!isMobile?9:0}
+                    className={styles['profileButtons']}
                 >
                     <Button type="primary">Withdrawal</Button>
                     <Button type="primary">Blacklist registration</Button>
@@ -106,6 +109,7 @@ const MemberDetails = ()=> {
                     >
                         <p>Membership number</p>
                     </Row>
+                    {!isMobile &&  (
                     <Row
                         className={styles['r2']}
                     >
@@ -113,7 +117,7 @@ const MemberDetails = ()=> {
                             className={styles['c1']}
                             span={12}
                         >
-                            <p level={5}>investment member</p>
+                            <p >Investment member</p>
                         </Col>
                         <Col
                             className={styles['c2']}
@@ -122,15 +126,31 @@ const MemberDetails = ()=> {
                             <Row
                                className={styles['r3']}
                             >
-                                <p level={5}>Category</p>
+                                <p >Category</p>
                             </Row>
                             <Row
                                 className={styles['r4']}
                             >
-                                <p level={5}>GUID</p>
+                                <p >GUID</p>
                             </Row>
                         </Col>
                     </Row>
+                    )}
+                    {isMobile && (
+                    <>
+                    <Row
+                        className={styles['r1']}
+                    >
+                        <p>Category</p>
+                    </Row>
+                    <Row
+                        className={styles['r1']}
+                    >
+                        <p>GUID</p>
+                    </Row>
+                    </>
+                    )}
+                    {!isMobile &&  (
                     <Row
                         className={styles['r2']}
                     >
@@ -138,7 +158,7 @@ const MemberDetails = ()=> {
                             className={styles['c1']}
                             span={12}
                         >
-                            <p level={5}>loan member</p>
+                            <p >Loan member</p>
                         </Col>
                         <Col
                             className={styles['c2']}
@@ -147,99 +167,119 @@ const MemberDetails = ()=> {
                             <Row
                                className={styles['r3']}
                             >
-                                <p level={5}>Category</p>
+                                <p >Category</p>
                             </Row>
                             <Row
                                 className={styles['r4']}
                             >
-                                <p level={5}>GUID</p>
+                                <p >GUID</p>
                             </Row>
                         </Col>
                     </Row>
+                    )}
+                    {isMobile && (
+                    <>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Category</p>
+                        <p>Category</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>dormant state</p>
+                        <p>GUID</p>
+                    </Row>
+                    </>
+                    )}
+                    <Row
+                        className={styles['r1']}
+                    >
+                        <p >Category</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Blacklist status</p>
+                        <p >Dormant state</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Member name</p>
+                        <p >Blacklist status</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>birth date</p>
+                        <p >Member name</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>gender</p>
+                        <p >Birth date</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>email id</p>
+                        <p >Gender</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>phone number</p>
+                        <p >Email id</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>address</p>
+                        <p >Phone number</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>job</p>
+                        <p >Phone number</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Withdrawal account</p>
+                        <p >Address</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>deposit account</p>
+                        <p >Job</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Repayment-only account</p>
+                        <p >Withdrawal account</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Consent to receive marketing</p>
+                        <p >deposit account</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Agree to terms and conditions</p>
+                        <p >Repayment-only account</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Registration date and time</p>
+                        <p >Consent to receive marketing</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Memo</p>
+                        <p >Agree to terms and conditions</p>
+                    </Row>
+                    <Row
+                        className={styles['r1']}
+                    >
+                        <p >Registration date and time</p>
+                    </Row>
+                    <Row
+                        className={styles['r1']}
+                    >
+                        <p >Memo</p>
                     </Row>
                     
                 </Col>
@@ -249,97 +289,102 @@ const MemberDetails = ()=> {
                     <Row
                         className={styles['r11']}
                     >
-                        <p level={5}>{`Abc${currentData}`}</p>
+                        <p >{`Abc12${currentData}`}</p>
                     </Row>
                     <Row
-                        className={styles['r12']}
+                        className={!isMobile?styles['r12']:styles['r11']}
                     >
-                        <p level={5}>general individual</p>
+                        <p >General individual</p>
                     </Row>
                     <Row
-                        className={styles['r13']}
+                        className={!isMobile?styles['r13']:styles['r11']}
                     >
-                        <p level={5}>qwerasdf1324</p>
+                        <p >Qwerasdf1324</p>
                     </Row>
                     <Row
-                        className={styles['r14']}
+                        className={!isMobile?styles['r14']:styles['r11']}
                     >
-                         <p level={5}>individual</p>
+                         <p >Individual</p>
                     </Row>
                     <Row
-                        className={styles['r15']}
+                        className={!isMobile?styles['r14']:styles['r11']}
                     >
-                         <p level={5}>Approval denied <Button type="primary">Check the reson</Button></p>
-                    </Row>
-                    <Row
-                        className={styles['r15']}
-                    >
-                         <p level={5}>Dormant (2023-01-01 09:00:00)  <Button type="primary">Wake Up</Button></p>
+                         <p >Zxcasdqwe1234</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>blacklist <Button type="primary">Check the reson</Button> <Button type="primary">Remove blacklist</Button></p>
+                         <p >Approval denied</p> <Button type="primary">Check the reson</Button>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>Kim Gil-dong <Button type="primary">Check change history</Button></p>
+                        <p >Dormant (2023-01-01 09:00:00) </p><Button type="primary">Wake Up</Button>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>1988-01-02</p>
+                         <p >Blacklist</p>  <Button type="primary">Check the reson</Button> {!isMobile && (<Button type="primary">Remove blacklist</Button>)}
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>man</p>
+                        <p >Kim Gil-dong</p>  <Button type="primary">Check change history</Button>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>gildongkim@naver.com</p>
+                         <p >1988-01-02</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>010-1234-5678</p>
+                         <p >Man</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}><Input value="02-1234-5678"/></p>
+                         <p >Gildongkim@naver.com</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}><Button disabled>(01234) 서울특별시 강동구 천호대로 12길</Button><Button type="primary">Adderss Search</Button><Input style={{width:'29%'}} value="상세주소" /></p>
+                         <p >010-1234-5678</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>Office workers</p>
+                         <p ><Input value="02-1234-5678"/></p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>Shinhan Bank 123-45-678-90</p>
+                        <Button type="primary">Adderss Search</Button>{!isMobile && (<Button disabled>(01234) 서울특별시 강동구 천호대로 12길</Button> )}<Input style={{width:'29%',marginLeft:'23px'}} value="상세주소" />
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>Jeonbuk Bank 012-33-22221</p>
+                         <p >Office workers</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}><Button type="primary">Learn more</Button></p>
+                         <p >Shinhan Bank 123-45-678-90</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                        <p level={5}>   
+                         <p >Jeonbuk Bank 012-33-22221</p>
+                    </Row>
+                    <Row
+                        className={styles['r15']}
+                    >
+                        <Button type="primary">Learn more</Button>
+                    </Row>
+                    <Row
+                        className={styles['r15']}
+                    >
+                        <p >   
                             <CheckboxGroup 
                                 options={[
                                     'email', 
@@ -347,19 +392,29 @@ const MemberDetails = ()=> {
                                 ]} 
                                 defaultValue="email"
                             />
-                            <Button type="primary">Check consent history</Button>
+                            {!isMobile &&(<Button type="primary">Check consent history</Button>)}
                         </p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}><TextArea  rows={2} Col={10} value="
-                                악성민원으로 전화상담 시 주의 필요
-                                1금융 대출 1건/연체없음
-                                이내 소유 아파트로 대출 문의
-                                1순위 하나은행 10억 대출 중
-                                대출금리 15%로 협의중"/>
-                        </p>
+                        <p >Agree to all terms and conditions</p>  <Button type="primary">Check consent history</Button>
+                    </Row>
+                    <Row
+                        className={styles['r15']}
+                    >
+                        <p > 2022-01-01 09:00:00</p>
+                    </Row>
+                    <Row
+                        className={styles['r15']}
+                    >
+                        <TextArea  rows={2} Col={10} value="
+                            악성민원으로 전화상담 시 주의 필요
+                            1금융 대출 1건/연체없음
+                            이내 소유 아파트로 대출 문의
+                            1순위 하나은행 10억 대출 중
+                            대출금리 15%로 협의중"
+                        />
                     </Row>
                 </Col>
             </Row>
@@ -382,22 +437,22 @@ const MemberDetails = ()=> {
                       <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Corporation name</p>
+                        <p >Corporation name</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Company Registration Number</p>
+                        <p >Company Registration Number</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Business phone number</p>
+                        <p >Business phone number</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Business address</p>
+                        <p >Business address</p>
                     </Row>
                 </Col>
                 <Col
@@ -406,28 +461,25 @@ const MemberDetails = ()=> {
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>Ganada Corporation</p>
+                         <p >Ganada Corporation</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>ABC1111-222-333323</p>
+                         <p >ABC1111-222-333323</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}><Input value="111-222-3333" /></p>
+                         <p ><Input value="111-222-3333" /></p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}><Button type="primary">Learn more</Button><Button disabled>(01234) 서울특별시 강동구 천호대로 12길</Button><Input style={{width:'29%'}} value="상세주소" /></p>
+                       <Button type="primary">Learn more</Button>{!isMobile && (<Button disabled>(01234) 서울특별시 강동구 천호대로 12길</Button>)}<Input style={{width:'29%',marginLeft:'23px'}} value="상세주소" />
                     </Row>
                 </Col>
             </Row>
-
-
-
             <Row>
                 <Typography.Title
                     level={5}
@@ -446,12 +498,12 @@ const MemberDetails = ()=> {
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Last saved date</p>
+                        <p >Last saved date</p>
                     </Row>
                     <Row
                         className={styles['r1']}
                     >
-                        <p level={5}>Manager</p>
+                        <p >Manager</p>
                     </Row>
                 </Col>
                 <Col
@@ -460,12 +512,12 @@ const MemberDetails = ()=> {
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>2022-01-01 09:00:00</p>
+                         <p >2022-01-01 09:00:00</p>
                     </Row>
                     <Row
                         className={styles['r15']}
                     >
-                         <p level={5}>Manager Kim</p>
+                         <p >Manager Kim</p>
                     </Row>
                 </Col>
             </Row>
